@@ -15,6 +15,10 @@ USER hubot
 WORKDIR $HUBOT_HOME_DIR
 
 # install yeoman and generator
+
+RUN npm config set proxy http://ancy.proxy.corp.sopra:8080
+RUN npm config set https-proxy http://ancy.proxy.corp.sopra:8080
+
 RUN npm config set registry http://registry.npmjs.org/
 RUN npm install -g yo generator-hubot
 
