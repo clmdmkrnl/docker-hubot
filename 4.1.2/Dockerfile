@@ -15,7 +15,7 @@ USER hubot
 WORKDIR $HUBOT_HOME_DIR
 
 # install yeoman and generator
-
+RUN echo 'Set des proxy pour NPM'
 RUN npm config set proxy http://ancy.proxy.corp.sopra:8080
 RUN npm config set https-proxy http://ancy.proxy.corp.sopra:8080
 
